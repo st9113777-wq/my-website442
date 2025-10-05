@@ -38,3 +38,21 @@ body {
 .sidebar li {
   margin: 10px 0;
 }
+/* Відео-секція */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+.video {
+  background-color: #ddd;
+  width: calc(33% - 10px);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
