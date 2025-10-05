@@ -2,6 +2,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+/* Верхнє меню */
 .header {
   display: flex;
   justify-content: space-between;
@@ -20,9 +22,12 @@ body {
   padding: 5px;
   width: 250px;
 }
+
 .main {
   display: flex;
 }
+
+/* Бічне меню */
 .sidebar {
   width: 200px;
   background-color: #f1f1f1;
@@ -37,22 +42,68 @@ body {
 
 .sidebar li {
   margin: 10px 0;
+  cursor: pointer;
 }
-/* Відео-секція */
+
+.sidebar li:hover {
+  font-weight: bold;
+}
+
+/* Контент */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 .videos {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 20px;
-  flex-grow: 1;
-  background-color: #fff;
+  margin-top: 10px;
 }
 
 .video {
   background-color: #ddd;
   width: calc(33% - 10px);
-  height: 150px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.video img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+.video p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .videos .video {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
 }

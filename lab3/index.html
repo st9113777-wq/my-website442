@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Layout</title>
+  <title>Моя YouTube сторінка</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <header class="header">
+
+  <!-- Верхнє меню -->
+  <header class="header">
     <div class="logo">🎬 YouTube</div>
     <div class="search-bar">
       <input type="text" placeholder="Пошук">
@@ -15,31 +17,92 @@
     </div>
     <div class="user-menu">🔔 👤</div>
   </header>
-    <main class="main"></main>
-     <nav class="sidebar">
+
+  <!-- Основна частина -->
+  <main class="main">
+    <!-- Бічне меню -->
+    <nav class="sidebar">
       <ul>
-        <li>🏠 Головна</li>
-        <li>🔥 В тренді</li>
-        <li>📺 Підписки</li>
-        <li>📚 Бібліотека</li>
+        <li onclick="openTab('home')">🏠 Головна</li>
+        <li onclick="openTab('trending')">🔥 В тренді</li>
+        <li onclick="openTab('subscriptions')">📺 Підписки</li>
+        <li onclick="openTab('history')">⏱ Що дивилися</li>
+        <li onclick="openTab('subscribed')">👤 На кого підписані</li>
       </ul>
     </nav>
-  <section class="videos">
-  <div class="video">
-    <img src="https://via.placeholder.com/320x150.png?text=Відео+1" alt="Відео 1">
-    <p>Назва відео 1</p>
-  </div>
-  <div class="video">
-    <img src="https://via.placeholder.com/320x150.png?text=Відео+2" alt="Відео 2">
-    <p>Назва відео 2</p>
-  </div>
-  <div class="video">
-    <img src="https://via.placeholder.com/320x150.png?text=Відео+3" alt="Відео 3">
-    <p>Назва відео 3</p>
-  </div>
-</section>
-        
+
+    <!-- Вкладки -->
+    <section class="content">
+
+      <div id="home" class="tab-content active">
+        <h2>Головна</h2>
+        <div class="videos">
+          <div class="video">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZn9CLZb4Sq5v6Wj-AYnAMgyjEbJGk-RlJDQ&s" alt="Відео 1">
+            <p>Ютуб заблокують назавжди?</p>
+          </div>
+          <div class="video">
+            <img src="https://i.ytimg.com/vi/23ZVaUUqrvs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDId3GIuXn328Hw4lvJfhgWGvfbOw" alt="Відео 2">
+            <p>ВЗЛОМ АДОПТ ФОТОШОП БЕЗ ВІРУСІВ І РЕКЛАМИ!</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="trending" class="tab-content">
+        <h2>В тренді</h2>
+        <div class="videos">
+          <div class="video">
+            <img src="https://static.tildacdn.com/tild3763-6662-4462-a439-633531326264/1636127_900_600.png" alt="Тренд 1">
+            <p>КРУТІ ПРЕВЬЮ ДЛЯ ВАШОГО КАНАЛА</p>
+          </div>
+          <div class="video">
+            <img src="https://i.ytimg.com/vi/SnDV-XXVyv0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCyuYebRnm3H6j9TGSVUUxeanzPfg" alt="Тренд 2">
+            <p>ТОП ЧЕЛЕНДЖІВ</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="subscriptions" class="tab-content">
+        <h2>Підписки</h2>
+        <div class="videos">
+          <div class="video">
+            <img src="https://upload.wikimedia.org/wikipedia/uk/4/48/Minecraft_logo.png" alt="Підписка 1">
+            <p>бомбер в майнкрафті</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="history" class="tab-content">
+        <h2>Що ви дивилися</h2>
+        <div class="videos">
+          <div class="video">
+            <img src="https://upload.wikimedia.org/wikipedia/uk/4/48/Minecraft_logo.png" alt="Історія 1">
+            <p>бомбер в майнкрафті</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="subscribed" class="tab-content">
+        <h2>На кого підписані</h2>
+        <div class="videos">
+          <div class="video">
+            <img src="https://code.visualstudio.com/assets/docs/languages/cpp/msg-intellisense.png" alt="Канал 1">
+            <p>C++ master</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
+  <!-- JavaScript для вкладок -->
+  <script>
+    function openTab(tabId) {
+      // Прибираємо active у всіх вкладок
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      // Додаємо active на вибрану вкладку
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
