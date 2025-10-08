@@ -5,6 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторні заняття – Олег Філоненко</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Стилізація форми */
+        form {
+            background: white;
+            padding: 25px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            width: 350px;
+        }
+
+        h3 {
+            text-align: center;
+            color: #2d3436;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2d3436;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #b2bec3;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #0984e3;
+            outline: none;
+            box-shadow: 0 0 5px rgba(9,132,227,0.5);
+        }
+
+        input[type="submit"] {
+            background: #0984e3;
+            color: white;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #74b9ff;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,9 +76,44 @@
     <section>
         <h2>Список лабораторних</h2>
         <ul>
-            <li>Лабораторна та практична  №1 – <em>Створив свій сайт</em></li>
+            <li>Лабораторна та практична №1 – <em>Створив свій сайт</em></li>
             <li>Лабораторна та практична №3 – <em><a href="https://classroom.google.com/c/NzgwMjk0NzgwNjA1/a/ODA4NTg0MTI3MjQ0/details" target="_blank">Лабораторна</a></em></li>
         </ul>
+    </section>
+
+    <!-- Додана форма -->
+    <section>
+        <form action="https://formspree.io/f/xvgzjqzy" method="post">
+            <h3>Форма реєстрації користувача</h3>
+
+            <label for="first_name">Ім'я:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Прізвище:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Підтвердження паролю:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <label for="birth_date">Дата народження:</label>
+            <input type="date" id="birth_date" name="birth_date">
+
+            <label for="gender">Стать:</label>
+            <select id="gender" name="gender">
+                <option value="">Оберіть стать</option>
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+                <option value="other">Інше</option>
+            </select>
+
+            <input type="submit" value="Зареєструватися">
+        </form>
     </section>
 
     <footer>
