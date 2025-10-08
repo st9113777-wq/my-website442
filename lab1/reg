@@ -1,5 +1,10 @@
 <form action="https://example.com/submit_form" method="post">
   <h2>Реєстраційна форма</h2>
+
     <label for="first_name">Ім'я:</label>
   <input type="text" id="first_name" name="first_name" required>
+  <br><br>
+  
+  <label for="last_name">Прізвище:</label>
+  <input type="text" id="last_name" name="last_name" required>
   <br><br>
