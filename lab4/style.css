@@ -1,0 +1,55 @@
+/* Основні стилі сторінки */
+body {
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Сітка клавіатури */
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(14, 60px);
+    gap: 8px;
+}
+
+/* Стиль клавіш */
+.key {
+    background: #ecf0f1;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 6px;
+    box-shadow: 0 5px #bdc3c7;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+}
+
+/* Різні розміри клавіш */
+.key.large {
+    grid-column: span 2;
+}
+
+.key.extra-large {
+    grid-column: span 3;
+}
+
+.key.space {
+    grid-column: span 5;
+}
+
+/* Ефект натискання */
+.key:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px #bdc3c7;
+    background: #dfe6e9;
+}
+
+/* Hover ефект */
+.key:hover {
+    background: #dfe6e9;
+}

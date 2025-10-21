@@ -56,6 +56,13 @@
         input[type="submit"]:hover {
             background: #74b9ff;
         }
+
+        /* Стилізація iframe клавіатури */
+        .keyboard-frame {
+            border: 1px solid #b2bec3;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
@@ -76,12 +83,12 @@
     <section>
         <h2>Список лабораторних</h2>
         <ul>
-            <li>Лабораторна та практична №1 – <em>Створив свій сайт</em></li>
+            <li>Лабораторна та практична №1 – <em>Створив свій сайт і додав форму</em></li>
             <li>Лабораторна та практична №3 – <em><a href="https://classroom.google.com/c/NzgwMjk0NzgwNjA1/a/ODA4NTg0MTI3MjQ0/details" target="_blank">Лабораторна</a></em></li>
         </ul>
     </section>
 
-    <!-- Додана форма -->
+    <!-- Форма реєстрації -->
     <section>
         <form action="https://formspree.io/f/xvgzjqzy" method="post">
             <h3>Форма реєстрації користувача</h3>
@@ -114,6 +121,15 @@
 
             <input type="submit" value="Зареєструватися">
         </form>
+    </section>
+
+    <!-- Клавіатура -->
+    <section>
+        <h2>Практична робота №4 – Віртуальна клавіатура</h2>
+        <iframe class="keyboard-frame" 
+                src="https://st9113777-wq.github.io/my-website442/" 
+                width="100%" height="400px">
+        </iframe>
     </section>
 
     <footer>
