@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav .menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header .view-all {
+    text-decoration: none;
+    color: #ff3366;
+    font-weight: bold;
+}
+
+.labs-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1 1 30%;
+    min-width: 250px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card .date {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+    font-size: 14px;
+}
+
+.practices-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-practice {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    align-items: center;
+}
+
+.card-practice img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-practice .text h3 {
+    margin: 0 0 5px 0;
+}
+
+.card-practice .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.tag.html { background: #ff5c5c; }
+.tag.css { background: #5c9eff; }
+
+@media (max-width: 900px) {
+    .labs-cards {
+        flex-direction: column;
+    }
+    .card-practice {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-practice img {
+        width: 100%;
+        height: auto;
+    }
+}
