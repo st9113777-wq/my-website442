@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    background: #1e3c72;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    margin-top: 20px;
+    color: white;
+    font-size: 32px;
+}
+
+.subtitle {
+    color: #d0e2ff;
+    margin-bottom: 10px;
+}
+
+/* СЦЕНА */
+.scene {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background: linear-gradient(#1e3c72, #2a5298);
+}
+
+/* ХМАРИ */
+.clouds {
+    position: absolute;
+    top: 40px;
+    width: 300%;
+    height: 150px;
+    background: rgba(255,255,255,0.3);
+    filter: blur(2px);
+    animation: cloudsMove 30s linear infinite;
+}
+
+@keyframes cloudsMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* ПРЯМЕ ПОСИЛАННЯ НА СПРАЙТ-ШИТ PokémonDB */
+.pokemon {
+    position: absolute;
+    bottom: 80px;
+    left: -100px;
+    width: 80px;
+    height: 80px;
+
+    background: url("https://img.pokemondb.net/sprites/heartgold-soulsilver/walk/charizard.png");
+
+    animation: walk 0.7s steps(4) infinite,
+               run 7s linear infinite;
+}
+
+/* анімація руху спрайта */
+@keyframes walk {
+    from { background-position:   0px 0px; }
+    to   { background-position: -320px 0px; } /* 4 кадри × 80px */
+}
+
+/* переміщення вперед */
+@keyframes run {
+    from { transform: translateX(0); }
+    to   { transform: translateX(130vw); }
+}
+
+/* ТРАВА */
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 300%;
+    height: 90px;
+
+    background: repeating-linear-gradient(
+        -45deg,
+        #27ae60,
+        #27ae60 20px,
+        #2ecc71 20px,
+        #2ecc71 40px
+    );
+
+    animation: groundMove 4s linear infinite;
+}
+
+@keyframes groundMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
