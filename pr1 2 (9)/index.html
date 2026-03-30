@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Фільмова база</title>
+    <style>
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #ccc; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Фільмова база</h1>
+    <input type="text" id="searchInput" placeholder="Пошук за назвою...">
+    <div id="movieGrid" class="grid"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
